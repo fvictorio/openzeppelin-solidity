@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { PANIC_CODES } = require('@nomicfoundation/hardhat-chai-matchers/panic');
+const { PANIC_CODES } = require('@fvictorio/hardhat-chai-matchers/panic');
 
 function shouldBehaveLikeSet() {
   async function expectMembersMatch(methods, values) {

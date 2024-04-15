@@ -57,7 +57,7 @@ const { argv } = require('yargs/yargs')()
     },
   });
 
-require('@nomicfoundation/hardhat-chai-matchers');
+require('@fvictorio/hardhat-chai-matchers');
 require('@nomicfoundation/hardhat-ethers');
 require('hardhat-exposed');
 require('hardhat-gas-reporter');

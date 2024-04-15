@@ -1,8 +1,8 @@
 const { ethers } = require('hardhat');
 const { expect } = require('chai');
 const { loadFixture } = require('@nomicfoundation/hardhat-network-helpers');
-const { anyValue } = require('@nomicfoundation/hardhat-chai-matchers/withArgs');
-const { PANIC_CODES } = require('@nomicfoundation/hardhat-chai-matchers/panic');
+const { anyValue } = require('@fvictorio/hardhat-chai-matchers/withArgs');
+const { PANIC_CODES } = require('@fvictorio/hardhat-chai-matchers/panic');
 
 const { GovernorHelper, timelockSalt } = require('../../helpers/governance');
 const { VoteType } = require('../../helpers/enums');

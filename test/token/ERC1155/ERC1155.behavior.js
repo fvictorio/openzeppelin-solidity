@@ -1,6 +1,6 @@
 const { ethers } = require('hardhat');
 const { expect } = require('chai');
-const { anyValue } = require('@nomicfoundation/hardhat-chai-matchers/withArgs');
+const { anyValue } = require('@fvictorio/hardhat-chai-matchers/withArgs');
 
 const { RevertType } = require('../../helpers/enums');
 const { shouldSupportInterfaces } = require('../../utils/introspection/SupportsInterface.behavior');
