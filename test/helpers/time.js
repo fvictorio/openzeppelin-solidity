@@ -7,7 +7,13 @@ const clock = {
   timestamp: () => time.latest().then(ethers.toBigInt),
 };
 const clockFromReceipt = {
-  blocknumber: receipt => Promise.resolve(ethers.toBigInt(receipt.blockNumber)),
+  blocknumber: async receipt => {
+    if (receipt.blockNumber === null) {
+      // receipt is probably a tx, wait for it
+      receipt = await receipt.wait();
+    }
+    return ethers.toBigInt(receipt.blockNumber)
+  },
   timestamp: receipt => ethers.provider.getBlock(receipt.blockNumber).then(block => ethers.toBigInt(block.timestamp)),
 };
 const increaseBy = {
